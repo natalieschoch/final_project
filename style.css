@@ -1,0 +1,14 @@
+@import url(http://fonts.googleapis.com/css?family=Cardo:400,400italic,700);
+@import url(reset.css);
+
+body {
+	background: #6699ff;
+	font-family: Cardo, helvetica, sans serif;
+	font-size: 16px;
+	line-height: 1.75em;
+	color: white;
+}
+
+#content {
+	width: 960px;
+}
