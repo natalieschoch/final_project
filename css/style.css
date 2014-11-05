@@ -1,14 +1,68 @@
 @import url(http://fonts.googleapis.com/css?family=Cardo:400,400italic,700);
 @import url(reset.css);
+@import url(http://fonts.googleapis.com/css?family=Vollkorn:400italic,700italic,400,700);
 
 body {
 	background: #6699ff;
-	font-family: Cardo, helvetica, sans serif;
+	font-family: Vollkorn, helvetica, sans serif;
 	font-size: 16px;
-	line-height: 1.75em;
+	line-height: 1.25em;
 	color: white;
 }
 
+a {
+	color: white;
+}
+
+.links ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.links li {
+    float: left;
+    margin-right: 30px;
+}
+
+.last li{
+  margin-right: 0px;
+}
+
+
+
 #content {
 	width: 960px;
+	margin: 60px;
+	position: relative;
 }
+
+#bio {
+	margin-top: 140px;
+	max-width: 600px;
+	font-size: 32px;
+	line-height: 35px;
+	font-weight: 400;
+	-webkit-font-smoothing: antialiased;
+}
+
+.nav {
+	font-family: FaceplateSans LV;
+	-webkit-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+}
+
+.nav.name{
+	font-size: 21pt;
+}
+
+.nav .links{
+	font-size: 15pt;
+	opacity: .8;
+}
+
+#emojis {
+	position: absolute;
+	float: bottom;
+}
+
