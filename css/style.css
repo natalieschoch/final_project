@@ -2,6 +2,16 @@
 @import url(reset.css);
 @import url(http://fonts.googleapis.com/css?family=Vollkorn:400italic,700italic,400,700);
 
+html {
+	min-height: 100%;
+	height: 100%;
+}
+
+html, body {
+	margin: 0 auto;
+	height: 100%;
+}
+
 .clearfix:after {
     clear: both;
     display: block;
@@ -9,51 +19,57 @@
     content: " ";
 }
 
-body {
+.frame {
+	display: block;
+	max-width: 1200px;
+	width: 85%;
+	margin: 0 auto;
+	position: relative;
+	padding-bottom: 200px;
+}
+
+.group {
+	padding: 60px 0;
+}
+
+#one {
+	padding: 60px
 	font-family: Vollkorn, helvetica, sans serif;
 	font-size: 16px;
 	line-height: 1.25em;
 	color: white;
-	background: #3399cc;
+	background: #0fabe8;
+	transition: all 5s ease;
 }
 
-a:link {
+#two {
+
+}
+
+.thumnails {
+	position: absolute;
+	display: block;
+}
+
+.thumbnail {
+	background: url(../images/thumbnail.jpg) no-repeat;
+	position: relative;
+	float: left;
+	bottom: 0;
+	padding-right: 30px;
+	height: 300px;
+	width: 500px;
+	display: inline-block;
+}
+
+a {
 	color: white;
 }
 
-a.nav {
-	text-decoration: none;
-
-}
-
-
-
-
-.links ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-.links li {
-    float: left;
-    margin-left: 30px;
-}
-
-
-#content {
-	max-width: 1200px;
-	width: 85%;
-	margin: 60px auto;
-	position: relative;
-	padding-bottom: 200px;
-
-}
-
 #bio {
-	margin-top: 140px;
+	margin-top: 130px;
 	max-width: 600px;
-	font-size: 32px;
+	font-size: 30px;
 	line-height: 35px;
 	font-weight: 400;
 	-webkit-font-smoothing: antialiased;
@@ -64,56 +80,70 @@ a.nav {
 	-webkit-font-smoothing: antialiased;
 	font-smoothing: antialiased;
 	display: inline;
-
 }
 
 .nav.name{
-	font-size: 21pt;
+	font-size: 23pt;
 	float:left;
 }
 
 .nav .links{
-	font-size: 15pt;
-	opacity: .8;
+	font-size: 16pt;
 	float: right;
-	position: relative;
+	position: fixed;
+	right:100px;
+}
+.nav a {
+	text-decoration: none;
+	color:white;
+	opacity: .8;
+	transition: all .3s ease;
+}
+
+.nav a:hover {
+	opacity:1;
+}
+
+#bio a:link {
+	text-decoration: none;
+	border-bottom: 2.5px solid white;
+}
+
+#bio a:hover {
+	border-bottom-color: white;
+}
+
+.links li {
+    float: left;
+    margin-left: 30px;
 }
 
 #emojis {
-	position: fixed;
+	position: absolute;
 	bottom: 0;
-	margin-bottom: 60px;
+	right: 0;
+	margin-bottom: 40px;
 	display: inline;
-	margin-right: 20px;
 }
 
 #contact {
-	margin-right: 15px;
-	background: url(../images/emojis-22.png) ;
+	margin-right: 25px;
 	height:30px;
 	width:30px;
 	display: inline-block;
 }
 
-#about {
-	background: url(../images/emojis-23.png) ;
-	height:30px;
-	width:30px;
-	display: inline-block;
- }
 
  #social {
-	position: fixed;
+	position: absolute;
 	bottom: 0;
-	right: 0;
-	margin-bottom: 60px;
+	left: 0;
+	margin-bottom: 40px;
 	display: inline;
-	margin-right: 20px;
-	margin-right: 60px;
  }
 
  #twitter {
-	background: url(../images/sm-15.png) no-repeat;
+	background: url(../images/sm-13.png) no-repeat;
 	height:40px;
 	width:40px;
 	display: inline-block;
@@ -121,7 +151,7 @@ a.nav {
 }
 
  #linkedin {
-	background: url(../images/sm-16.png) no-repeat;
+	background: url(../images/sm-14.png) no-repeat;
 	height:40px;
 	width:40px;
 	display: inline-block;
@@ -129,7 +159,7 @@ a.nav {
 }
 
 #dribble {
-	background: url(../images/sm-17.png) no-repeat;
+	background: url(../images/sm-15.png) no-repeat;
 	height:40px;
 	width:40px;
 	display: inline-block;
@@ -137,11 +167,48 @@ a.nav {
 }
 
 #behance {
-	background: url(../images/sm-18.png) no-repeat;
+	background: url(../images/sm-16.png) no-repeat;
 	height:40px;
 	width:40px;
 	display: inline-block;
 	padding-left: 13px;
 }
 
+a.hover_effect {
+  position: relative;
+  text-decoration: none;
+}
+a.hover_effect span {display: none;}
+a.hover_effect:hover span {
+  display: block;
+  position: absolute; 
+  padding: .5em;
+  content: attr(title);
+  min-width: 80px;
+  text-align: center;
+  width: auto;
+  height: auto;
+  white-space: nowrap;
+  top: -52px;
+  left: -28px;
+  background: rgba(0,0,0,.8);
+  -moz-border-radius:10px;
+  -webkit-border-radius:10px;
+  border-radius: 3px;    
+  color: white;
+  font-size: .86em;
+}
+a.hover_effect:hover span:after {
+  position: absolute;
+  display: block;
+  content: "";  
+  border-color: rgba(0,0,0,.8) transparent transparent transparent;
+  border-style: solid;
+  border-width: 10px;
+  height:0;
+  width:0;
+  position:absolute;
+  bottom: -16px;
+  left:2.5em;
+  }
 
