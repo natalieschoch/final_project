@@ -19,6 +19,8 @@ html, body {
     content: " ";
 }
 
+
+
 .frame {
 	display: block;
 	max-width: 1200px;
@@ -33,8 +35,7 @@ html, body {
 }
 
 #one {
-	padding: 60px
-	font-family: Vollkorn, helvetica, sans serif;
+	font: helvetica;
 	font-size: 16px;
 	line-height: 1.25em;
 	color: white;
@@ -46,22 +47,35 @@ html, body {
 
 }
 
-.thumnails {
-	position: absolute;
-	display: block;
+.thumbnails {
+	display: inline;
+
 }
 
-.thumbnail {
-	background: url(../images/thumbnail.jpg) no-repeat;
-	position: relative;
-	float: left;
-	bottom: 0;
+.thumb {
 	padding-right: 30px;
+	padding-top:30px;
 	height: 300px;
 	width: 500px;
-	display: inline-block;
+	float: left;
 }
 
+
+.thumb1 {
+	background: url(../images/thumbnail.jpg) no-repeat;
+}
+
+.thumb2 {
+	background: url(../images/thumbnail.jpg) no-repeat;
+}
+
+.thumb3 {
+	background: url(../images/thumbnail.jpg) no-repeat;
+}
+
+.thumb4 {
+	background: url(../images/thumbnail.jpg) no-repeat;
+}
 a {
 	color: white;
 }
@@ -79,7 +93,6 @@ a {
 	font-family: FaceplateSans LV;
 	-webkit-font-smoothing: antialiased;
 	font-smoothing: antialiased;
-	display: inline;
 }
 
 .nav.name{
@@ -91,7 +104,7 @@ a {
 	font-size: 16pt;
 	float: right;
 	position: fixed;
-	right:100px;
+	right:140px;
 }
 .nav a {
 	text-decoration: none;
@@ -118,6 +131,7 @@ a {
     margin-left: 30px;
 }
 
+
 #emojis {
 	position: absolute;
 	bottom: 0;
@@ -133,8 +147,7 @@ a {
 	display: inline-block;
 }
 
-
- #social {
+#social {
 	position: absolute;
 	bottom: 0;
 	left: 0;
